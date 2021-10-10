@@ -12,29 +12,34 @@
 		<div class="container">
 			<nav class="nav">
 				<ul class="nav-list">
-					<li class="nav-item">Home</li>
-					<li class="nav-item">Projects</li>
-					<li class="nav-item">Contact</li>
+					<li class="nav-item">
+						<a href="#home" class="nav-item">Home</a>
+					</li>
+					<li class="nav-item">
+						<a href="#projects" class="nav-item">Projects</a>
+					</li>
+					<li class="nav-item" class="nav-item">Contact</li>
 				</ul>
 			</nav>
-			<section class="home">
+			<section class="home" id="home">
 				<div class="home-left">
 					<div class="home-left-top">
 						<h1 class="hero-greeting">Hey. I'm Caleb.</h1>
-						<h2 class="hero-subtitle">I build web stuff.</h2>
+						<h2 class="hero-subtitle">I build stuff for the internet.</h2>
 					</div>
-
 					<p class="hero-description">
-						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere
-						beatae perferendis vel aut, possimus iusto, deserunt incidunt
-						necessitatibus tempore quas ipsa at similique asperiores, porro
-						nostrum nam ex sequi culpa.
+						I'm a front end developer. Lorem ipsum dolor sit amet, consectetur
+						adipisicing elit. Laudantium maiores velit dolores impedit qui sunt!
 					</p>
 				</div>
 			</section>
 			<!-- Projects -->
 			<!-- Standards -->
-			<div class="projects">
+			<div class="projects" id="projects">
+				<div class="projects-header">
+					<h1>Projects</h1>
+					<div class="line"></div>
+				</div>
 				<section class="project standards">
 					<div class="project-screenshot-container left">
 						<img src="/images/standards-1.PNG" alt="" class="screenshot" />
@@ -44,14 +49,17 @@
 					<div class="project-text-container left">
 						<h3 class="project-title">Standards</h3>
 						<p class="project-description">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
-							saepe quo aliquid voluptatum expedita soluta fuga, totam neque
-							blanditiis nam itaque, reiciendis harum. Necessitatibus nam quas
-							possimus. Omnis reprehenderit cum dolorum voluptate enim, quae,
-							facilis ab, ex quas soluta esse.
+							Calculates the number of standard drinks in a given drink using
+							size and ABV, as well as tracks total intake and the 'current'
+							alcohol in your system using a 1 standard drink per hour burnoff
+							rate.<br /><br />
+							Built using vanilla JS.
 						</p>
 						<div class="project-text-container-bottom">
-							<ul class="technologies left">
+							<ul class="media-links">
+								<li class="media-link screenshots-link">Screenshots</li>
+							</ul>
+							<ul class="technologies horizontal-scroll left">
 								<li class="technology-item">HTML</li>
 								<li class="technology-item">CSS</li>
 								<li class="technology-item">Vanilla Javascript</li>
@@ -62,14 +70,14 @@
 									<a
 										href="https://standardsapp.io/"
 										target="blank"
-										class="project-link"
+										class="project-link live-site-link"
 										>Live Site</a
 									>
 								</li>
 								<a
 									href="https://github.com/calebmacgregor/standards"
 									target="blank"
-									class="project-link"
+									class="project-link github-link"
 									>Github</a
 								>
 							</ul>
@@ -84,18 +92,26 @@
 						<img src="/images/time-3.PNG" alt="" class="screenshot" />
 						<img src="/images/time-5.PNG" alt="" class="screenshot" />
 						<img src="/images/time-6.PNG" alt="" class="screenshot" />
+						<video
+							controls
+							src="/images/time-video.mp4"
+							class="screenshot"
+						></video>
 					</div>
 					<div class="project-text-container right">
-						<h3 class="project-title">Time</h3>
-						<p class="project-description">
+						<h3 class="project-title right">Time</h3>
+						<p class="project-description right">
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
 							saepe quo aliquid voluptatum expedita soluta fuga, totam neque
 							blanditiis nam itaque, reiciendis harum. Necessitatibus nam quas
 							possimus. Omnis reprehenderit cum dolorum voluptate enim, quae,
 							facilis ab, ex quas soluta esse.
 						</p>
-						<div class="project-text-container-bottom">
-							<ul class="technologies right">
+						<div class="project-text-container-bottom right">
+							<ul class="media-links">
+								<li class="media-link screenshots-link">Screenshots</li>
+							</ul>
+							<ul class="technologies horizontal-scroll right">
 								<li class="technology-item">HTML</li>
 								<li class="technology-item">CSS</li>
 								<li class="technology-item">Vanilla Javascript</li>
@@ -106,16 +122,18 @@
 									<a
 										href="https://calebmacgregor.github.io/time/"
 										target="blank"
-										class="project-link"
+										class="project-link live-site-link"
 										>Live Site</a
 									>
 								</li>
-								<a
-									href="https://github.com/calebmacgregor/time"
-									target="blank"
-									class="project-link"
-									>Github</a
-								>
+								<li class="project-link">
+									<a
+										href="https://github.com/calebmacgregor/time"
+										target="blank"
+										class="project-link github-link"
+										>Github</a
+									>
+								</li>
 							</ul>
 						</div>
 					</div>
