@@ -58,3 +58,14 @@ document.addEventListener("click", handleImageZoom)
 document.addEventListener("click", expandScreenshotModalMobile)
 document.addEventListener("click", expandScreenshotModalDesktop)
 document.addEventListener("click", minimizeScreenshotModal)
+
+function animateBurger(e) {
+	const parent = e.target.closest(".nav-burger")
+	if (!parent) return
+	const burgerPieces = Array.from(document.querySelectorAll(".burger-piece"))
+	burgerPieces.forEach((piece) => {
+		piece.classList.toggle("expanded")
+	})
+}
+
+document.addEventListener("click", animateBurger)
