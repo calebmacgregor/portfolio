@@ -1,71 +1,23 @@
-function handleImageZoom(e) {
-	const image = e.target.closest(".screenshot")
-	if (!image) return
+import {
+	handleImageZoom,
+	expandScreenshotModalDesktop,
+	expandScreenshotModalMobile,
+	minimizeScreenshotModal
+} from "./functions.js"
 
-	image.classList.toggle("zoomed")
-}
+function handleNavExpander(e) {
+	const navExpanderContainer = e.target.closest(".nav-expander-container")
+	if (!navExpanderContainer) return
+	const navExpander = navExpanderContainer.querySelector(".nav-expander")
+	navExpander.classList.toggle("expanded")
 
-function expandScreenshotModalMobile(e) {
-	if (!e.target.classList.contains("screenshots-link")) return
-	const project = e.target.closest(".project")
-	if (!project) return
-	const screenshotContainer = project.querySelector(
-		".project-screenshot-container"
-	)
-	screenshotContainer.classList.add("open")
-
-	//Disable scrolling
-	const body = document.querySelector("body")
-	body.classList.add("scroll-disabled")
-}
-
-function expandScreenshotModalDesktop(e) {
-	if (!e.target.classList.contains("screenshot")) return
-	const project = e.target.closest(".project")
-	if (!project) return
-	const screenshotContainer = project.querySelector(
-		".project-screenshot-container"
-	)
-	screenshotContainer.classList.add("open")
-
-	//Disable scrolling
-	const body = document.querySelector("body")
-	body.classList.add("scroll-disabled")
-}
-
-function minimizeScreenshotModal(e) {
-	if (e.target.classList.contains("screenshots-link")) return
-	if (e.target.classList.contains("screenshot")) return
-
-	const screenshotContainers = Array.from(
-		document.querySelectorAll(".project-screenshot-container")
-	)
-
-	const openScreenshotModals = screenshotContainers.filter((modal) => {
-		return modal.classList.contains("open")
-	})
-
-	if (!openScreenshotModals.length > 0) return
-	openScreenshotModals.forEach((modal) => {
-		modal.classList.remove("open")
-	})
-	//Reenable scrolling
-	const body = document.querySelector("body")
-	body.classList.remove("scroll-disabled")
+	const navList = document.querySelector(".nav-list")
+	navList.classList.toggle("mobile-hidden")
 }
 
 document.addEventListener("click", handleImageZoom)
 document.addEventListener("click", expandScreenshotModalMobile)
 document.addEventListener("click", expandScreenshotModalDesktop)
 document.addEventListener("click", minimizeScreenshotModal)
-
-function animateBurger(e) {
-	const parent = e.target.closest(".nav-burger")
-	if (!parent) return
-	const burgerPieces = Array.from(document.querySelectorAll(".burger-piece"))
-	burgerPieces.forEach((piece) => {
-		piece.classList.toggle("expanded")
-	})
-}
-
-document.addEventListener("click", animateBurger)
+document.addEventListener("click", handleNavExpander)
+// document.addEventListener("scroll", autohideNav)
