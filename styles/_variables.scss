@@ -1,0 +1,29 @@
+:root {
+	--dark-blue: #0a192f;
+	--middle-blue: #112240;
+	--light-blue: hsl(216, 60%, 20%);
+	--shader: hsl(218, 58%, 16%, 90%);
+	--primary-offwhite: #ced6f6;
+	--secondary-offwhite: #8a92af;
+	--pink-accent: #ff326d;
+	--blue-accent: #64ffda;
+
+	/* Transition speeds */
+	--snail: 1000ms;
+	--slow: 750ms;
+	--medium: 500ms;
+	--fast: 250ms;
+	--turbo: 150ms;
+
+	/* Item heights */
+	--desktop-nav-bar: 4rem;
+	--desktop-nav-bar-negative: -4rem;
+	--mobile-nav-bar: 3rem;
+	--mobile-nav-bar-negative: -3rem;
+
+	/* Gaps */
+	--little-gap: 1rem;
+	--medium-gap: 2rem;
+	--big-gap: 3rem;
+	--jumbo-gap: 6rem;
+}
