@@ -4,7 +4,8 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="style.css" />
+		<!-- <link rel="stylesheet" href="style.css" /> -->
+		<link rel="stylesheet" href="./styles/styles.css" />
 		<script src="main.js" type="module"></script>
 		<title>Caleb MacGregor</title>
 	</head>
@@ -12,15 +13,16 @@
 		<div class="container">
 			<nav class="nav drop-shadow">
 				<ul class="nav-list mobile-hidden">
-					<li class="nav-item">
+					<li>
 						<a href="#home" class="nav-item">Home</a>
 					</li>
-					<li class="nav-item">
+					<li>
 						<a href="#projects" class="nav-item">Projects</a>
 					</li>
-					<li class="nav-item" class="nav-item">Contact</li>
+					<li>
+						<a href="#contact" class="nav-item">Contact</a>
+					</li>
 				</ul>
-				<div class="logo">CM</div>
 				<div class="nav-expander-container">
 					<svg
 						class="nav-expander"
@@ -54,11 +56,10 @@
 			</section>
 			<!-- Projects -->
 			<div class="projects" id="projects">
-				<div class="projects-header section-header">
-					<h2 class="projects-header section-header">Behold, my stuff</h2>
+				<div class="section-header">
+					<h2>Behold, my stuff</h2>
 					<div class="line"></div>
 				</div>
-				<!-- Standards -->
 				<!-- Time -->
 				<section class="project subsection">
 					<div class="project-screenshot-container right">
@@ -69,7 +70,10 @@
 						<img src="./images/time-6.PNG" alt="" class="screenshot" />
 					</div>
 					<div class="project-text-container right">
-						<h3 class="project-title right">Time</h3>
+						<div class="project-title-container right">
+							<img src="./images/icons/Time icon.png" alt="" />
+							<h3 class="project-title right">Time</h3>
+						</div>
 						<p class="project-description drop-shadow right">
 							A PWA companion app for the Up banking app. It hooks into the Up
 							Developer API and shows money earned and spent as a factor of the
@@ -107,6 +111,7 @@
 						</div>
 					</div>
 				</section>
+				<!-- Standards -->
 				<section class="project subsection">
 					<div class="project-screenshot-container left">
 						<img src="./images/standards-1.PNG" alt="" class="screenshot" />
@@ -114,7 +119,10 @@
 						<img src="./images/standards-3.PNG" alt="" class="screenshot" />
 					</div>
 					<div class="project-text-container left">
-						<h3 class="project-title">Standards</h3>
+						<div class="project-title-container">
+							<img src="./images/icons/Standards icon.png" alt="" />
+							<h3 class="project-title">Standards</h3>
+						</div>
 						<p class="project-description drop-shadow">
 							A PWA that calculates the number of standard drinks in a given
 							drink using size and ABV, as well as tracks total intake and the
