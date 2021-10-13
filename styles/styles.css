@@ -497,7 +497,7 @@ footer {
     transition: 250ms ease-in-out;
   }
   .nav .nav-list .nav-item {
-    font-size: 2rem;
+    font-size: 1.4rem;
   }
   .nav .nav-list.mobile-hidden {
     -webkit-transform: translateY(calc(-60vh - env(safe-area-inset-top)));
