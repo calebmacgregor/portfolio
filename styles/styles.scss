@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
 
 @import "./variables";
+@import "./_animations";
 
 * {
 	padding: 0;
@@ -431,6 +432,8 @@ footer {
 
 		.project-screenshot-container {
 			display: none;
+			animation: none !important;
+			opacity: 1;
 		}
 
 		.project-text-container {

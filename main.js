@@ -31,3 +31,19 @@ document.addEventListener("click", minimizeScreenshotModal)
 document.addEventListener("click", handleNavExpander)
 document.addEventListener("click", minimiseNav)
 // document.addEventListener("scroll", autohideNav)
+
+const images = Array.from(document.querySelectorAll(".anim"))
+
+const observer = new IntersectionObserver((entries) => {
+	entries.forEach((entry) => {
+		if (entry.intersectionRatio > 0) {
+			entry.target.style.animation = `slide-up 500ms ${entry.target.dataset.delay} forwards ease-in-out`
+		}
+	})
+
+	console.log(entries)
+})
+
+images.forEach((image) => {
+	observer.observe(image)
+})
