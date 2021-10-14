@@ -1,0 +1,17 @@
+.skills {
+	margin-top: 4rem;
+	background-color: green;
+	min-height: 100vh;
+
+	.web-dev {
+		display: flex;
+		flex-direction: column;
+		gap: var(--little-gap);
+
+		ul {
+			li {
+				font-size: 4rem;
+			}
+		}
+	}
+}

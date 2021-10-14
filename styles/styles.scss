@@ -2,6 +2,7 @@
 
 @import "./variables";
 @import "./_animations";
+@import "./skills";
 @import "./_footer";
 
 * {
@@ -123,6 +124,11 @@ section {
 		color: var(--primary-offwhite);
 		font-weight: 700;
 		text-decoration: none;
+		transition: background-color 250ms ease;
+
+		&:hover {
+			background-color: var(--pink-accent);
+		}
 	}
 
 	.home-left {
@@ -156,19 +162,22 @@ section {
 	padding-top: var(--desktop-nav-bar);
 	margin-top: var(--desktop-nav-bar-negative);
 	gap: var(--jumbo-gap);
-
-	.section-header {
-		display: flex;
-		flex-direction: column;
-		color: var(--primary-offwhite);
-		gap: var(--little-gap);
-		margin-right: 2rem;
-	}
 }
 
-.line {
-	height: 2px;
-	background-color: var(--middle-blue);
+.section-header {
+	display: flex;
+	flex-direction: column;
+	color: var(--primary-offwhite);
+	gap: var(--little-gap);
+	margin-right: 2rem;
+
+	&::after {
+		content: "";
+		display: block;
+		width: 100%;
+		background-color: var(--middle-blue);
+		height: 2px;
+	}
 }
 
 .project {
@@ -192,9 +201,12 @@ section {
 		padding: 2rem;
 		overflow: scroll;
 		border-radius: 10px;
+		transition: opacity 150ms ease;
 
 		&.open {
 			display: flex;
+			opacity: 1;
+			pointer-events: initial;
 			background-color: var(--shader);
 			height: 100vh;
 			position: fixed;
@@ -427,7 +439,8 @@ section {
 		height: auto;
 
 		.project-screenshot-container {
-			display: none;
+			opacity: 0;
+			pointer-events: none;
 		}
 
 		.project-text-container {

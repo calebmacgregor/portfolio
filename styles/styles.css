@@ -58,6 +58,27 @@
   }
 }
 
+.skills {
+  margin-top: 4rem;
+  background-color: green;
+  min-height: 100vh;
+}
+
+.skills .web-dev {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: var(--little-gap);
+}
+
+.skills .web-dev ul li {
+  font-size: 4rem;
+}
+
 .footer {
   height: 20vh;
   width: 100%;
@@ -242,6 +263,12 @@ section {
   color: var(--primary-offwhite);
   font-weight: 700;
   text-decoration: none;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+}
+
+.home .work-button:hover {
+  background-color: var(--pink-accent);
 }
 
 .home .home-left {
@@ -284,7 +311,7 @@ section {
   gap: var(--jumbo-gap);
 }
 
-.projects .section-header {
+.section-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -297,9 +324,12 @@ section {
   margin-right: 2rem;
 }
 
-.line {
-  height: 2px;
+.section-header::after {
+  content: "";
+  display: block;
+  width: 100%;
   background-color: var(--middle-blue);
+  height: 2px;
 }
 
 .project {
@@ -334,12 +364,16 @@ section {
   padding: 2rem;
   overflow: scroll;
   border-radius: 10px;
+  -webkit-transition: opacity 150ms ease;
+  transition: opacity 150ms ease;
 }
 
 .project .project-screenshot-container.open {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  opacity: 1;
+  pointer-events: initial;
   background-color: var(--shader);
   height: 100vh;
   position: fixed;
@@ -611,7 +645,8 @@ section {
     height: auto;
   }
   .project .project-screenshot-container {
-    display: none;
+    opacity: 0;
+    pointer-events: none;
   }
   .project .project-text-container {
     position: relative;
