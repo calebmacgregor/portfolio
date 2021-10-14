@@ -583,9 +583,6 @@ footer {
   }
   .project .project-screenshot-container {
     display: none;
-    -webkit-animation: none !important;
-            animation: none !important;
-    opacity: 1;
   }
   .project .project-text-container {
     position: relative;
