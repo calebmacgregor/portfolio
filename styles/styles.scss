@@ -2,6 +2,7 @@
 
 @import "./variables";
 @import "./_animations";
+@import "./_footer";
 
 * {
 	padding: 0;
@@ -27,7 +28,7 @@ body {
 	justify-content: center;
 	width: 100vw;
 
-	.scroll-disabled {
+	&.scroll-disabled {
 		height: calc(100% + env(safe-area-inset-top));
 		overflow: hidden;
 	}
@@ -323,11 +324,6 @@ section {
 			}
 		}
 	}
-}
-
-/* Footer */
-footer {
-	height: 20vh;
 }
 
 /* Miscellaneous */

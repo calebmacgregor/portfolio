@@ -1,0 +1,20 @@
+.footer {
+	height: 20vh;
+	width: 100%;
+	padding: var(--mobile-main-padding);
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+
+	ul {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		width: 100%;
+
+		li {
+			color: var(--secondary-offwhite);
+			font-size: 0.8rem;
+		}
+	}
+}
