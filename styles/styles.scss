@@ -67,10 +67,6 @@ body {
 	transition: transform 350ms ease;
 	z-index: 9999;
 
-	.shrunk {
-		transform: translateY(-300%);
-	}
-
 	.nav-list {
 		display: flex;
 		justify-content: space-around;
@@ -368,6 +364,7 @@ section {
 		.nav-list {
 			display: flex;
 			position: absolute;
+			opacity: 1;
 			right: 0;
 			top: 0;
 			height: calc(60vh + env(safe-area-inset-top));
@@ -383,6 +380,7 @@ section {
 
 			&.mobile-hidden {
 				transform: translateY(calc(-60vh - env(safe-area-inset-top)));
+				opacity: 0;
 			}
 		}
 	}

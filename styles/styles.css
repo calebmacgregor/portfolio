@@ -189,11 +189,6 @@ body.scroll-disabled {
   z-index: 9999;
 }
 
-.nav .shrunk {
-  -webkit-transform: translateY(-300%);
-          transform: translateY(-300%);
-}
-
 .nav .nav-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -574,6 +569,7 @@ section {
     display: -ms-flexbox;
     display: flex;
     position: absolute;
+    opacity: 1;
     right: 0;
     top: 0;
     height: calc(60vh + env(safe-area-inset-top));
@@ -595,6 +591,7 @@ section {
   .nav .nav-list.mobile-hidden {
     -webkit-transform: translateY(calc(-60vh - env(safe-area-inset-top)));
             transform: translateY(calc(-60vh - env(safe-area-inset-top)));
+    opacity: 0;
   }
   .nav-expander-container {
     display: -webkit-box;
